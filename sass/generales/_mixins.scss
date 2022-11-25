@@ -1,0 +1,11 @@
+@mixin flex ($dir,$swrap, $just, $align ){
+    display: flex;
+    flex-flow: $dir $swrap;
+    justify-content: $just;
+    align-items: $align;
+} 
+@mixin media(){
+    @media screem and (max-width:480px){
+        @content   
+    }
+}
