@@ -5,90 +5,50 @@
 
 /* https://codepen.io/carlosriera/pen/qNgrEo */
 header {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  background-color: rgba(61, 18, 155, 0.866);
+  color: rgb(0, 255, 72);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  height: 70px;
 }
-header .menu_rigth #check1 {
-  display: none;
+header .menu_left #check_left {
+  /*             display: none; */
 }
-header .menu_rigth #check1:checked ~ ul {
+header .menu_left #check_left:checked ~ ul {
   left: 0;
   transition: all 0.25s;
 }
-header .menu_rigth #check1:not(checked) ~ ul {
+header .menu_left #check_left:checked .menu {
+  background-color: rgb(255, 28, 28);
+}
+header .menu_left #check_left:not(checked) ~ ul {
   left: -100%;
   transition: all 0.25s;
 }
-header .menu_rigth .checkbtn .menu-icon {
-  background-color: red;
-  display: block;
+header .menu_left .check_label_left .menu {
   position: fixed;
   top: 20px;
   left: 20px;
   cursor: pointer;
 }
-header .menu_rigth .checkbtn .menu-icon img {
+header .menu_left .check_label_left .menu img {
   width: 30px;
   border-radius: 2px;
-  background-color: red;
 }
-header .menu_rigth ul {
-  display: flex;
-  flex-direction: column;
-  display: block;
-  position: fixed;
-  top: 70px;
-  left: -100%;
-  background: #222;
-  width: 100%;
-  height: 100vh;
-  right: 0;
+header .menu_left .check_label_left .menu h2 {
+  font-size: 12px;
 }
-header .menu_rigth ul li {
-  margin-right: 1rem;
-  padding: 15px;
-  display: flex;
-  margin: 0;
-}
-header .menu_rigth ul li a {
-  color: #fff;
-}
-header .menu_left #check {
-  display: none;
-}
-header .menu_left #check:checked ~ ul {
-  right: 0;
-  transition: all 0.25s;
-}
-header .menu_left #check:not(checked) ~ ul {
-  right: -100%;
-  transition: all 0.25s;
-}
-header .menu_left .checkbtn .menu-icon {
-  background-color: yellow;
-  display: block;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-header .menu_left .checkbtn .menu-icon img {
-  width: 30px;
-  border-radius: 2px;
-  background-color: red;
+header .menu_left .check_label_left .menu:focus {
+  background-color: rgb(255, 28, 28);
 }
 header .menu_left ul {
   display: flex;
   flex-direction: column;
-  display: block;
   position: fixed;
   top: 70px;
-  right: -100%;
-  background: rgb(233, 45, 45);
+  left: -100%;
+  background: #222;
   width: 100%;
   height: 100vh;
   right: 0;
@@ -100,6 +60,51 @@ header .menu_left ul li {
   margin: 0;
 }
 header .menu_left ul li a {
+  color: rgb(255, 255, 255);
+}
+header .menu_right #check_right {
+  display: none;
+}
+header .menu_right #check_right:checked ~ ul {
+  right: 0;
+  transition: all 0.25s;
+}
+header .menu_right #check_right:not(checked) ~ ul {
+  right: -100%;
+  transition: all 0.25s;
+}
+header .menu_right .check_label_rigth .menu-icon {
+  background-color: yellow;
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+header .menu_right .check_label_rigth .menu-icon img {
+  width: 30px;
+  border-radius: 2px;
+  background-color: red;
+}
+header .menu_right ul {
+  display: flex;
+  flex-direction: column;
+  display: block;
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  background: rgb(233, 45, 45);
+  width: 100%;
+  height: 100vh;
+  right: 0;
+}
+header .menu_right ul li {
+  margin-right: 1rem;
+  padding: 15px;
+  display: flex;
+  margin: 0;
+}
+header .menu_right ul li a {
   color: #fff;
 }
 

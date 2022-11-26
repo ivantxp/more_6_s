@@ -1,28 +1,31 @@
 /* https://codepen.io/carlosriera/pen/qNgrEo */
 
 header{
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: rgba(61, 18, 155, 0.866);
+    color: rgb(0, 255, 72);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 2rem;
-    .menu_rigth{
-        #check1{
-            display: none;
+    height: 70px;
+    .menu_left{
+        #check_left{
+/*             display: none; */ 
+
             &:checked ~ ul{
                 left: 0;
                 transition: all .25s;
+                
+            }
+            &:checked  .menu{
+                background-color:  rgb(255, 28, 28);
             }
             &:not(checked) ~ ul{
                 left: -100%;
                 transition: all .25s;
             }
         }
-        .checkbtn{
-            .menu-icon {
-                background-color: red;
-                display: block;
+        .check_label_left{
+            .menu {
                 position: fixed;
                 top: 20px;
                 left: 20px;
@@ -30,14 +33,19 @@ header{
                 img{
                     width:30px;
                     border-radius: 2px;
-                    background-color: red; 
+                }
+                h2{
+                    font-size: 12px;
+                }
+                &:focus{
+                    background-color:  rgb(255, 28, 28);
+
                 }
             }
         }    
         ul{
             display: flex;
             flex-direction: column;
-            display: block;
             position: fixed;
             top:70px;
             left:-100%;
@@ -51,14 +59,14 @@ header{
                 display: flex;
                 margin: 0;
                 a{
-                    color: #fff;
+                    color: rgb(255, 255, 255);
                 }
             }
         }
     }  
 
-    .menu_left{
-        #check{
+    .menu_right{
+        #check_right{
             display: none;
             &:checked ~ ul{
                 right: 0;
@@ -69,7 +77,7 @@ header{
                 transition: all .25s;
             }
         }
-        .checkbtn{
+        .check_label_rigth{
             .menu-icon {
                 background-color: yellow;
                 display: block;
