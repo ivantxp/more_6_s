@@ -1,7 +1,7 @@
 /* https://codepen.io/carlosriera/pen/qNgrEo */
 
 header{
-    background-color: rgba(61, 18, 155, 0.866);
+    background-color: rgb(252, 213, 213);
     color: rgb(0, 255, 72);
     display: flex;
     justify-content: space-between;
@@ -9,15 +9,14 @@ header{
     height: 70px;
     .menu_left{
         #check_left{
-/*             display: none; */ 
-
-            &:checked ~ ul{
+            display: none;
+            &:checked ~ .menu_left  .check_label_left .menu{
+                background-color: gold;
+                color: gold;
+            }
+            &:checked ~ .ul_lefet{
                 left: 0;
                 transition: all .25s;
-                
-            }
-            &:checked  .menu{
-                background-color:  rgb(255, 28, 28);
             }
             &:not(checked) ~ ul{
                 left: -100%;
@@ -36,10 +35,6 @@ header{
                 }
                 h2{
                     font-size: 12px;
-                }
-                &:focus{
-                    background-color:  rgb(255, 28, 28);
-
                 }
             }
         }    
@@ -60,6 +55,9 @@ header{
                 margin: 0;
                 a{
                     color: rgb(255, 255, 255);
+                }
+                &:hover a{
+                    background-color: red;
                 }
             }
         }
