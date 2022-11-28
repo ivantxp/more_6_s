@@ -1,19 +1,16 @@
 /* https://codepen.io/carlosriera/pen/qNgrEo */
-/* 
+
 header{
+    position: sticky;
+    top:0;
     background-color: rgb(252, 213, 213);
-    color: rgb(0, 255, 72);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     .menu_left{
         #check_left{
             display: none;
-            &:checked ~ .menu_left  .check_label_left .menu{
-                background-color: gold;
-                color: gold;
-            }
             &:checked ~ .ul_left{
                 left: 0;
                 transition: all .25s;
@@ -26,8 +23,8 @@ header{
         .check_label_left{
             .menu {
                 position: fixed;
-                top: 20px;
-                left: 20px;
+                top: 10px;
+                left: 10px;
                 cursor: pointer;
                 img{
                     width:30px;
@@ -62,7 +59,6 @@ header{
             }
         }
     }  
-
     .menu_right{
         #check_right{
             display: none;
@@ -80,8 +76,8 @@ header{
                 background-color: yellow;
                 display: block;
                 position: fixed;
-                top: 20px;
-                right: 20px;
+                top: 10px;
+                right: 10px;
                 cursor: pointer;
                 img{
                     width:30px;
@@ -114,5 +110,4 @@ header{
     }
 }
 
- */
           

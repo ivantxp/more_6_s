@@ -1,0 +1,42 @@
+.main_index{
+    .contedor_img_muestra{
+        .img_muestra_grande{
+            display: flex;
+            justify-content: center;
+            .img_muestra{
+                width: 90%;
+                max-width: 500px;
+            }
+            .mover_img_L{
+                width: 40px;
+                height: 40px;
+                align-self: center;
+                position: absolute;
+                left: 30px;
+                &:hover{
+                    transform: scale(2);
+                } 
+            }
+            .mover_img_R{
+                width: 40px;
+                height: 40px;
+                align-self: center;
+                position: absolute;
+                right:30px ;
+                &:hover{
+                    transform: scale(2);
+                } 
+            }
+        }
+        .img_muestra_chica{
+            display: flex;
+            justify-content: center;
+            .img_muestra{
+                width: 60px;
+                margin: 5px;
+                transform: translate(0, -25px);
+
+            }
+        }
+    }
+}
