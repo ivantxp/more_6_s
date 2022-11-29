@@ -2,3 +2,10 @@
     margin:0;
     padding: 0;
 }
+.iconos{
+    width:30px;
+    height: 30px;
+    &:hover{
+        background-color: gray;
+    }
+}
